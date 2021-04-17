@@ -97,6 +97,7 @@
 </template>
 
 <script>
+import {findPage} from "@/api/brand"
     export default {
         data() {
             return {
@@ -129,18 +130,27 @@
                     }]
                 },
                 value2: '',
+                total:0,
                 searchParams: {
                     currentPage: 1,
                     pageSize: 5,
                 }
             }
         },
+        created() {
+            this.searchPage();
+        },
         methods: {
             /**
              * 查询所有
              * @param val
              */
+            searchPage(){
+                findPage(this.searchParams);
+            },
+
             selectChange() {
+
             }
         }
     }
