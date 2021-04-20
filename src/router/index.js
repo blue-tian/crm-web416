@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 // import Home from '../views/Home.vue'
 import main from '../views/main/index'
 import login from '../views/login/index'
-import brand from '../views/brand/index'
+
 
 Vue.use(VueRouter)
 
@@ -16,7 +16,7 @@ const routes = [
             {
                 path: '/brand',
                 name: 'brand',
-                component: brand
+                component: () => import( '../views/brand/index.vue')
             },
             {
                 path: '/login',
@@ -25,11 +25,11 @@ const routes = [
             },
         ]
     },
-    {
-        path: '/login',
-        name: 'login',
-        component: login
-    },
+    // {
+    //     path: '/login',
+    //     name: 'login',
+    //     component: login
+    // },
 
     // {
     //   path: '/about',

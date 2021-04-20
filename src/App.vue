@@ -44,4 +44,7 @@
         padding: 0;
         margin: 0;
     }
+    img{
+        vertical-align: center;
+    }
 </style>
